@@ -1,0 +1,44 @@
+{
+  "name": "electron-webmonitor",
+  "version": "1.0.0",
+  "description": "Embeddable browser component for Electron apps - bypasses iframe restrictions",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron example/main.js",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    "electron",
+    "webview",
+    "browser",
+    "iframe",
+    "monitor",
+    "embed"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "electron": ">=20.0.0"
+  },
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "build": {
+    "appId": "com.webmonitor.app",
+    "productName": "Web Monitor",
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}

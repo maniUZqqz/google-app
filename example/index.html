@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>WebMonitor Example</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body, #browser { height: 100%; width: 100%; overflow: hidden; }
+  </style>
+</head>
+<body>
+  <div id="browser"></div>
+
+  <script>
+    const WebMonitor = require('../src/index.js');
+
+    // Simple usage - just 3 lines!
+    const monitor = new WebMonitor({
+      container: '#browser',
+      theme: 'dark',           // 'dark' or 'light'
+      startUrl: 'https://google.com'
+    });
+
+    monitor.init();
+
+    // Optional: Listen to events
+    // monitor.options.onNavigate = (tab, url) => console.log('Navigated to:', url);
+    // monitor.options.onTitleChange = (tab, title) => console.log('Title:', title);
+  </script>
+</body>
+</html>

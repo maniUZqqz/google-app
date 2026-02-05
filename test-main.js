@@ -1,0 +1,1 @@
+console.log('process._linkedBinding available:', typeof process._linkedBinding === 'function'); try { const app = process._linkedBinding('electron_browser_app'); console.log('app binding:', app); } catch(e) { console.log('Error:', e.message); }
